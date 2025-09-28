@@ -5,7 +5,7 @@ The project was completed as part of an academic assignment (Feb 2025) and combi
 
 ---
 
-## 📌 Objectives
+## Objectives
 - Develop an automated algorithm to compute **continuously compounded discount rates** for each bond payment date (coupons and principal).  
 - Implement and compare different methodologies:
   - **Bootstrapping** (market-implied curve from raw prices).
@@ -16,14 +16,14 @@ The project was completed as part of an academic assignment (Feb 2025) and combi
 
 ---
 
-## ⚙️ Methodology
+## Methodology
 
 ### 1. Bootstrapping
 - Based on **U.S. Treasury bond dirty prices**.  
 - Cashflows expressed in **year fractions** using the *Actual/Actual (ISDA)* convention.  
 - Discount factors solved sequentially by maturity, with **log-discount factor interpolation** across 797 coupon dates.  
-- ✅ Advantage: exact match to market prices.  
-- ⚠️ Drawback: sensitive to noise, may break monotonicity.
+- Advantage: exact match to market prices.  
+- Drawback: sensitive to noise, may break monotonicity.
 
 ### 2. Nelson–Siegel (NS)
 - Four-parameter model capturing level, slope, and curvature.  
@@ -41,7 +41,7 @@ The project was completed as part of an academic assignment (Feb 2025) and combi
 
 ---
 
-## 📊 Results
+## Results
 
 - **Graph**: Comparison of observed yields, bootstrapped zeros, and the three fitted models.  
 - **Tables**:  
